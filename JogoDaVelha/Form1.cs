@@ -91,6 +91,61 @@ namespace JogoDaVelha
             }
 
             vezX = !vezX;
+
+            verificaVencedor();
+        }
+
+        private void verificaVencedor()
+        {
+            if (btnC1L1.Text == btnC2L1.Text && btnC1L1.Text == btnC3L1.Text && btnC1L1.Text != "")
+            {
+                lblVencedor.Text = btnC1L1.Text;
+                MessageBox.Show(btnC1L1.Text+ " é o vencedor ");
+                recomecar();
+            }
+            else if (btnC1L2.Text == btnC2L2.Text && btnC1L2.Text == btnC3L2.Text && btnC1L2.Text != "")
+            {
+                lblVencedor.Text = btnC1L2.Text;
+                MessageBox.Show(btnC1L2.Text + " é o vencedor ");
+                recomecar();
+            }
+            else if (btnC1L3.Text == btnC2L3.Text && btnC1L3.Text == btnC3L3.Text && btnC1L3.Text != "")
+            {
+                lblVencedor.Text = btnC1L3.Text;
+                MessageBox.Show(btnC1L2.Text + " é o vencedor ");
+                recomecar();
+            }
+            else if (btnC1L1.Text == btnC1L2.Text && btnC1L1.Text == btnC1L3.Text && btnC1L1.Text != "")
+            {
+                lblVencedor.Text = btnC1L1.Text;
+                MessageBox.Show(btnC1L1.Text + " é o vencedor ");
+                recomecar();
+            }
+            else if (btnC2L1.Text == btnC2L2.Text && btnC2L1.Text == btnC2L3.Text && btnC2L1.Text != "")
+            {
+                lblVencedor.Text = btnC2L1.Text;
+                MessageBox.Show(btnC2L1.Text + " é o vencedor ");
+                recomecar();
+            }
+            else if (btnC3L1.Text == btnC3L2.Text && btnC3L1.Text == btnC3L3.Text && btnC3L1.Text != "")
+            {
+                lblVencedor.Text = btnC3L1.Text;
+                MessageBox.Show(btnC3L1.Text + " é o vencedor ");
+                recomecar();
+            }
+            else if (btnC1L1.Text == btnC2L2.Text && btnC1L1.Text == btnC3L3.Text && btnC1L1.Text != "")
+            {
+                lblVencedor.Text = btnC1L1.Text;
+                MessageBox.Show(btnC1L1.Text + " é o vencedor ");
+                recomecar();
+            }
+            else if (btnC1L3.Text == btnC2L2.Text && btnC1L3.Text == btnC3L1.Text && btnC1L3.Text != "")
+            {
+                lblVencedor.Text = btnC1L3.Text;
+                MessageBox.Show(btnC1L3.Text + " é o vencedor ");
+                recomecar();
+            }
+
         }
     }
 }
