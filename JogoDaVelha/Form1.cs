@@ -13,7 +13,7 @@ namespace JogoDaVelha
     public partial class Form1 : Form
     {
         bool vezX = false;
-
+        int clique = 0;
         public Form1()
         {
             InitializeComponent();
@@ -72,6 +72,7 @@ namespace JogoDaVelha
 
             lblVez.Text = "";
             lblVencedor.Text = "";
+            clique = 0;
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -97,6 +98,7 @@ namespace JogoDaVelha
 
         private void verificaVencedor()
         {
+            clique++;
             if (btnC1L1.Text == btnC2L1.Text && btnC1L1.Text == btnC3L1.Text && btnC1L1.Text != "")
             {
                 lblVencedor.Text = btnC1L1.Text;
@@ -143,6 +145,12 @@ namespace JogoDaVelha
             {
                 lblVencedor.Text = btnC1L3.Text;
                 MessageBox.Show(btnC1L3.Text + " é o vencedor ");
+                recomecar();
+            }
+            else if(clique == 9)
+            {
+                lblVencedor.Text = "Empate";
+                MessageBox.Show("Houve empate entre O e X");
                 recomecar();
             }
 
